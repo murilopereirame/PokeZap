@@ -33,7 +33,7 @@ Para utilizar o bot, basta enviar o comando para o número com sessão iniciada:
 ![GIF demonstração](https://media3.giphy.com/media/QYSqkwZaRKLt8Kving/giphy.gif)
 
 ## Contribuição
-Pull requests são bem vindas. Para grandes mudanças, por favor, abra uma issue para discutirmos como fazer-las.
+Pull requests são bem vindas. Para grandes mudanças, por favor, abra uma issue para discutirmos como faze-las.
 
 ## Licença
 [Apache](https://www.apache.org/licenses/LICENSE-2.0)
