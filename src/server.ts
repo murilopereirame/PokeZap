@@ -36,7 +36,10 @@ function start(client: any) {
             let info = pokemon.getInfo();
             let image = pokemon.getImg();
             client.sendImage(message.from, image, 'img.png', info);
+            client.sendImageAsSticker(message.from, image);
         });
     }
+    
+
   });
 }

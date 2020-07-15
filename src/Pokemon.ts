@@ -46,18 +46,11 @@ class Pokemon {
                 this._tipo.push(pokeResponse.data['types'][i]['type']['name']);
             }
 
+            let imgUrl = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${pokeResponse.data['id'].toString().padStart(3, '0')}.png`            
             this._nome = pokeResponse.data['name'];
             this._index = pokeResponse.data['id'];
-            this._peso = pokeResponse.data['weight'];
-            let imgUrl = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${pokeResponse.data['id'].toString().padStart(3, '0')}.png`
-            let imgUri = `./poke/${pokeResponse.data['id'].toString().padStart(3, '0')}.png`;
-            this._imgUrl = imgUri;
-            if (!fs.existsSync(imgUri)) {
-                console.log(imgUri);
-                await this.downloadImage(imgUrl, imgUri);
-            }            
-
-        
+            this._peso = pokeResponse.data['weight'];            
+            this._imgUrl = imgUrl;                
         } catch(UnhandledPromiseRejectionWarning) {
             pokeResponse = undefined;
             this._index = -1;
